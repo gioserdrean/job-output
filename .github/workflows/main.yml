@@ -21,12 +21,12 @@ jobs:
 
           - name: Gerando output usando Action gerador de senha 
             id: generatedpassword
-            uses: aammiramirza/RandomPasswordGenerator@v1.1
+            uses: aammirmirza/RandomPasswordGenerator@v1.1
             with:
               length: 15
 
           - name: Exibindo o output da action de password
-            run: echo "${{ steps.generated-password.outputs.password }}"
+            run: echo "${{ steps.generatedpassword.outputs.password }}"
   exibindo_valores:
       needs: [gerando_output]
       runs-on: ubuntu-latest
